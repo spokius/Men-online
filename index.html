@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Miró — Menù</title>
+  <meta name="description" content="Menù digitale Miró — Caffetteria, Cocktail, Shots, Bottiglie, Prosecchi" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e0f12;
+      --card: #16181d;
+      --muted: #9aa3b2;
+      --text: #e9eef6;
+      --acc: #ef4444;
+      --acc-2: #22d3ee;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.5 Inter, sans-serif;
+    }
+    header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(12px); background: rgba(14,15,18,.85); border-bottom: 1px solid rgba(255,255,255,.08); }
+    .container { max-width: 980px; margin: 0 auto; padding: 20px; }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .logo svg { height: 56px; }
+    h1 { margin: 0; font-family: "Playfair Display", serif; font-size: 32px; }
+    .meta { color: var(--muted); font-size: 14px; margin-top: 4px; }
+    nav.catbar { margin-top: 10px; display:flex; gap:10px; overflow-x:auto; }
+    .chip { padding: 8px 14px; border:1px solid rgba(255,255,255,.12); border-radius:999px; color: var(--text); text-decoration:none; font-size:14px; }
+    .chip:hover { border-color: rgba(255,255,255,.3); }
+    section { margin-top: 30px; scroll-margin-top: 80px; }
+    .section-card { background: var(--card); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 20px; }
+    .section-title { font-family: "Playfair Display", serif; font-size: 26px; margin:0; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 12px; }
+    @media (min-width:720px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .item { display:grid; grid-template-columns: 1fr auto; gap: 10px; padding: 12px 14px; border-radius: 14px; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.06); }
+    .item h3 { margin:0; font-size:16px; }
+    .desc { color: var(--muted); font-size: 14px; margin-top: 4px; }
+    .price { font-weight: 700; align-self: center; }
+    footer { margin: 40px 0; text-align:center; font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <div class="logo">
+          <!-- Logo Miró in SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180">
+            <text x="0" y="120" font-family="Arial Black, sans-serif" font-size="120" fill="#ef4444" font-weight="900">M</text>
+            <rect x="210" y="40" width="50" height="90" fill="black"/>
+            <circle cx="230" cy="40" r="15" fill="limegreen"/>
+            <text x="280" y="120" font-family="Arial Black, sans-serif" font-size="120" fill="white" stroke="black" stroke-width="4">RÓ</text>
+          </svg>
+        </div>
+        <div>
+          <h1>Miró</h1>
+          <div class="meta">Via G. Marconi 6, Rende · <a href="tel:+393883609295" style="color:inherit">388 360 9295</a></div>
+        </div>
+      </div>
+      <nav class="catbar">
+        <a class="chip" href="#caffetteria">Caffetteria</a>
+        <a class="chip" href="#cocktail">Cocktail</a>
+        <a class="chip" href="#shots">Shots</a>
+        <a class="chip" href="#bottiglie">Bottiglie</a>
+        <a class="chip" href="#prosecchi">Prosecchi</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Sezione Caffetteria -->
+    <section id="caffetteria" class="section-card">
+      <h2 class="section-title">Caffetteria</h2>
+      <div class="grid">
+        <!-- DUPLICA QUESTO BLOCCO PER AGGIUNGERE ELEMENTI -->
+        <article class="item">
+          <div>
+            <h3>Nome prodotto</h3>
+            <p class="desc">Descrizione breve</p>
+          </div>
+          <div class="price">€ Prezzo</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sezione Cocktail -->
+    <section id="cocktail" class="section-card">
+      <h2 class="section-title">Cocktail</h2>
+      <div class="grid">
+        <article class="item">
+          <div>
+            <h3>Nome cocktail</h3>
+            <p class="desc">Descrizione breve</p>
+          </div>
+          <div class="price">€ Prezzo</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sezione Shots -->
+    <section id="shots" class="section-card">
+      <h2 class="section-title">Shots</h2>
+      <div class="grid">
+        <article class="item">
+          <div>
+            <h3>Nome shot</h3>
+            <p class="desc">Descrizione breve</p>
+          </div>
+          <div class="price">€ Prezzo</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sezione Bottiglie -->
+    <section id="bottiglie" class="section-card">
+      <h2 class="section-title">Bottiglie</h2>
+      <div class="grid">
+        <article class="item">
+          <div>
+            <h3>Nome bottiglia</h3>
+            <p class="desc">Descrizione breve</p>
+          </div>
+          <div class="price">€ Prezzo</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sezione Prosecchi -->
+    <section id="prosecchi" class="section-card">
+      <h2 class="section-title">Prosecchi</h2>
+      <div class="grid">
+        <article class="item">
+          <div>
+            <h3>Nome prosecco</h3>
+            <p class="desc">Descrizione breve</p>
+          </div>
+          <div class="price">€ Prezzo</div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      Ultimo aggiornamento: 27/08/2025 · © Miró
+    </footer>
+  </main>
+</body>
+</html>
